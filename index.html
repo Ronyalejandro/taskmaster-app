@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Gestiona tus tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ TaskMaster</h1>
+            <p class="subtitle">Organiza tu día con estilo</p>
+        </header>
+
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="¿Qué necesitas hacer hoy?"
+                autocomplete="off"
+            >
+            <button id="addBtn" class="btn-primary">
+                <span>Agregar</span>
+            </button>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pending">Pendientes</button>
+            <button class="filter-btn" data-filter="completed">Completadas</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="totalTasks">0</span>
+                <span class="stat-label">Total</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="pendingTasks">0</span>
+                <span class="stat-label">Pendientes</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="completedTasks">0</span>
+                <span class="stat-label">Completadas</span>
+            </div>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+
+        <div class="empty-state" id="emptyState">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                <circle cx="60" cy="60" r="50" stroke="#e0e0e0" stroke-width="4"/>
+                <path d="M40 60L55 75L80 45" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>No hay tareas aún</p>
+            <span>¡Comienza agregando una nueva tarea!</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
