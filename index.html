@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>✨ TaskMaster</h1>
+            <h1>✨TaskMaster</h1>
             <p class="subtitle">Organiza tu día con estilo</p>
         </header>
 
@@ -17,11 +17,11 @@
             <input 
                 type="text" 
                 id="taskInput" 
-                placeholder="¿Qué necesitas hacer hoy?"
+                placeholder="¿Qué Haremos hoy?"
                 autocomplete="off"
             >
             <button id="addBtn" class="btn-primary">
-                <span>Agregar</span>
+                <span>Agendar</span>
             </button>
         </div>
 
@@ -55,6 +55,12 @@
             </svg>
             <p>No hay tareas aún</p>
             <span>¡Comienza agregando una nueva tarea!</span>
+        </div>
+
+        <!-- Toast de deshacer eliminación -->
+        <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+            <span id="toastMessage"></span>
+            <button id="undoBtn" class="btn-undo">Deshacer</button>
         </div>
     </div>
 
